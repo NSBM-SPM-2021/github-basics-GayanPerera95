@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
 
 import { Button,ButtonToolbar } from 'react-bootstrap';
-import {AddEmpModel} from './src/AddEmpModel';
+import {AddEmpModel} from './AddEmpModel';
 
 export class Employee extends Component{
 
@@ -52,7 +52,18 @@ export class Employee extends Component{
                                  <td>{emp.Department}</td>
                                  <td>{emp.DateOfJoining}</td>
                                  <td>{emp.PhotoFileName}</td>
-                                 <td>Edit/ Delete</td>
+                                 <td>
+                                     <ButtonToolbar>
+                                         <Button className="mt-1" variant="info">
+                                             Edit
+                                         </Button>
+                                       
+
+                                         <Button className="mt-1" variant="danger">
+                                             Delete
+                                         </Button>
+                                     </ButtonToolbar>
+                                 </td>
 
                             </tr>
                             )}

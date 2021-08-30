@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import {Model,Button,Row,Col,Form} from 'react-bootstrap';
+import {Modal,Button,Row,Col,Form} from 'react-bootstrap';
 
 
 export class AddEmpModel extends Component{
@@ -35,18 +35,18 @@ export class AddEmpModel extends Component{
             <div className="container">
 
 
-                <Model 
+                <Modal 
                 {...this.props}
                 size="lg"
                 aria-labelledby="contained-model-title-vcenter"
                 centered>
 
-                    <Model.Header clooseButton>
-                        <Model.Title id = "contained-model-title-vcenter">
+                    <Modal.Header clooseButton>
+                        <Modal.Title id = "contained-model-title-vcenter">
                             Add Employee
-                        </Model.Title>
-                    </Model.Header>
-                    <Model.Body>
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
                         <Row>
                             <Col sm={6}>
                                 <Form onSubmit ={this.handleSubmit}>
@@ -64,11 +64,11 @@ export class AddEmpModel extends Component{
                                 </Form>
                             </Col>
                         </Row>
-                    </Model.Body>
-                    <Model.Footer>
+                    </Modal.Body>
+                    <Modal.Footer>
                         <Button variant="danger" onClick={this.props.onHide}>Close</Button>
-                    </Model.Footer>
-                </Model>
+                    </Modal.Footer>
+                </Modal>
             </div>
         )
     }
