@@ -20,8 +20,8 @@ export class AddEmpModal extends Component{
                 EmployeeId: event.target.EmployeeId.value,
                 EmployeeName: event.target.EmployeeName.value,
                 Department: event.target.Department.value,
-                DateOfJoining: event.target.DateOfJoining.value,
-                PhotoFileName: event.target.PhotoFileName.value
+                DateOfJoining: event.target.DateOfJoining.value
+                
             })
         })
 
@@ -76,11 +76,7 @@ export class AddEmpModal extends Component{
                                         <Form.Control type="date" name="DateOfJoining" required 
                                         placeholder="Enter date"/>
                                     </Form.Group>
-                                    <Form.Group controllId="PhotoFileName">
-                                        <Form.Label>Photo URL:</Form.Label>
-                                        <Form.Control type="text" name="PhotoFileName" required 
-                                        placeholder="Url.png"/>
-                                    </Form.Group>
+                                    
                                     <br></br>
                                     <Form.Group>
                                         <Button variant="primary" type="submit">

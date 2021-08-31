@@ -40,7 +40,6 @@ export class Employee extends Component{
                         <th>EmployeeName</th>
                         <th>Department</th>
                         <th>DateOfJoining</th>
-                        <th>PhotoFileName</th>
                         <th>Options</th>
                         </tr>
                     </thead>
@@ -51,7 +50,7 @@ export class Employee extends Component{
                                  <td>{emp.EmployeeName}</td>
                                  <td>{emp.Department}</td>
                                  <td>{emp.DateOfJoining}</td>
-                                 <td>{emp.PhotoFileName}</td>
+                                 
                                  <td>
                                      <ButtonToolbar>
                                          <Button className="mt-1" variant="info">
