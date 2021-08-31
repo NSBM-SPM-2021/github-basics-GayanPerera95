@@ -2,13 +2,13 @@ import React, {Component} from 'react';
 import {Table} from 'react-bootstrap';
 
 import { Button,ButtonToolbar } from 'react-bootstrap';
-import {AddEmpModel} from './AddEmpModel';
+import {AddEmpModal} from './AddEmpModel';
 
 export class Employee extends Component{
 
     constructor(props){
         super(props);
-        this.state={emps:[],addModelShow:false, isLoaded: false,
+        this.state={emps:[],addModalShow:false, isLoaded: false,
         }
     }
 
@@ -30,7 +30,7 @@ export class Employee extends Component{
 
     render(){
         const {emps} =this.state;
-        let addModelClose=()=>this.setState({addModelShow:false});
+        let addModalClose=()=>this.setState({addModalShow:false});
         return(
             <div>
                 <Table className="mt-4" striped bordered hover size="sm">
@@ -57,8 +57,7 @@ export class Employee extends Component{
                                          <Button className="mt-1" variant="info">
                                              Edit
                                          </Button>
-                                       
-
+                                            <td></td>
                                          <Button className="mt-1" variant="danger">
                                              Delete
                                          </Button>
@@ -71,12 +70,12 @@ export class Employee extends Component{
                 </Table>
                 <ButtonToolbar>
                     <Button variant='primary'
-                    onClick={()=>this.setState({addModelShow:true})}>
+                    onClick={()=>this.setState({addModalShow:true})}>
                         Add Employee
                     </Button>
 
-                    <AddEmpModel show={this.state.addModelShow}
-                    onHide={addModelClose}
+                    <AddEmpModal show={this.state.addModalShow}
+                    onHide={addModalClose}
                     />
                 </ButtonToolbar>
             </div>
