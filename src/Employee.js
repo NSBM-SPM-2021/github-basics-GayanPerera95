@@ -68,7 +68,7 @@ export class Employee extends Component{
                     </tbody>
                 </Table>
                 <ButtonToolbar>
-                    <Button variant='primary'
+                    <Button data-testid="addbutton" variant='primary'
                     onClick={()=>this.setState({addModalShow:true})}>
                         Add Employee
                     </Button>
