@@ -1,4 +1,5 @@
 {
+  "homepage": "https://NSBM-SPM-2021.github.io/github-basics-GayanPerera95",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -14,6 +15,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -39,6 +42,7 @@
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.7",
+    "gh-pages": "^3.2.3",
     "jest-dom": "^4.0.0",
     "react-test-render": "^1.1.2"
   }
