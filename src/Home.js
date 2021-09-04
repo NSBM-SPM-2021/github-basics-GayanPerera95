@@ -8,5 +8,4 @@ export class Home extends Component{
                 This is Home Page, Turn Next Employee Window.
             </div>
         )
-    }
-  }
+    }}
