@@ -65,7 +65,7 @@ export class Employee extends Component{
                                  <td>
                                      <ButtonToolbar>
                                          
-                                         <Button className="mt-1" variant="danger"
+                                         <Button data-testid="deletebutton" className="mt-1" variant="danger"
                                          onClick={()=>this.deleteEmp(emp.EmployeeId)}>
                                              Delete
                                          </Button>
