@@ -5,10 +5,11 @@ export class Home extends Component{
     render(){
         return(
             <div className = "mt-5 d-flex justify-content-left">
-                This is Home Page, Turn Next Employee Page.
+                This is Home Page, Turn Next Employee Window.
             </div>
         )
     }
+    
 }
   
 
