@@ -28,6 +28,17 @@ export class Employee extends Component{
         this.refreshList();
     }
 
+    deleteEmp(empid){
+        if(window.confirm('Are you sure?')){
+            fetch(process.env.REACT_APP_API+'employee/'+empid,{
+                method: 'DELETE',
+                header: {'Accept':'application/json',
+                'Content-Type': 'application/json'
+            }
+            })
+        }
+    }
+
     render(){
         const {emps} =this.state;
         let addModalClose=()=>this.setState({addModalShow:false});
@@ -53,11 +64,8 @@ export class Employee extends Component{
                                  
                                  <td>
                                      <ButtonToolbar>
-                                         <Button className="mt-1" variant="info">
-                                             Edit
-                                         </Button>
-                                            <td></td>
-                                         <Button className="mt-1" variant="danger">
+                                     <Button data-testid="deletebutton" className="mt-1" variant="danger"
+                                         onClick={()=>this.deleteEmp(emp.EmployeeId)}>
                                              Delete
                                          </Button>
                                      </ButtonToolbar>
