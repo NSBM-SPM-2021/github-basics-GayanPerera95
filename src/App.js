@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
     <div data-testid="todo-1" className="container">
       <h3 className="m-3 d-flex justify-content-center">
-        Employee Management System
+        Employee Management Syste
       </h3>
 
       <Navigation/>
